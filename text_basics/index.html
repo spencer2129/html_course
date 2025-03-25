@@ -9,15 +9,34 @@
     <body>
         <h1>Text Basics</h1>
         <p>Much of the text content on a web page will be made of headings and paragraphs. Headings have a hiearchy. There can only be one <code>&lt;h1&gt;</code> in the page. After that they can have subtopics using <code>&lt;h2&gt;</code> elements. The subtopics can have subtopics using <code>&lt;h3&gt;</code> and so on.</p>
-        <p>The headers give semantic meaning.  Screen readers can also navigate your page better if you're using headers to convey that this section is a subtopic of the main header, and so on.</p>
-        <p>In HTML, white-spacing </p>
-        
+        <p>The headers give semantic meaning.  Screen readers and assistive technology can also navigate your page better if you're using headers to convey that this section is a subtopic of the main header, and so on.</p>
+        <p>The <code>&lt;hr&gt;</code> horizontal rule element doesn't add semantic meaning to the page, but visually it adds a horizontal line that can show that a new section or topic is about to start or just ended.</p>
+        <p>In HTML, white-space collapsing means that HTML does not honor all the white spacing you might add with a space bar or the enter key; it will not be represented in the page. You can use the line break <code>&lt;br&gt;</code> element inside a paragraph <code>&lt;p&gt;</code> element to add a new line inside the paragraph.</p>
+        <p>Block-level elements starts with a new line.  They create space around the element. And they always take the full width available of its parent container.</p>
+        <p>Inline element does not start on a new line, and it only takes up as much width as necessary.</p>
         <hr>
 
         <h2>I'm ready to learn HTML</h2>
+        <p>This is my first web page.</p>
+
         <h3>My Daily Schedule</h3>
+        <p>Let me tell you how:
+            <br>...I learn about web dev.
+            <br>...I plan out my schedule.
+            <br>...I use resources from MDN.
+        </p>
         
         <hr>
+
+        <h2>I am also planning a vacation</h2>
+        <p>I've been working hard and I really need a gateway.</p>
+        <p>I live in MD, so I want to visit the west coast/p>
+
+        <h3>Places I would like to visit</h3>
+        <p>I've heard good things about San Diego</p>
+
+        <h3>Places I want to avoid</h3>
+        <p>Anywhere cold. No way!</p>
 
     </body>
 </html>
