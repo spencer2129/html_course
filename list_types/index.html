@@ -9,7 +9,7 @@
     </head>
     <body>
         <h1>List Types</h1>
-        <p>HTML lists come in three main categories: unordered lists, ordered lists, and definition lists.</p>
+        <p>HTML lists come in three main categories: unordered lists, ordered lists, and description lists.</p>
         <p>Unordered lists are used for presenting items that do no have a particular sequence order.  They're tipically displayed with bullet points.</p>
         <p>
             <code>
@@ -30,7 +30,7 @@
                 <br>&lt;/ol&gt;
             </code>
         </p>
-        <p>Definition lists are designed to present terms and their corresponding definitions.  They consist of a list of terms enclosed in <code>&lt;dt&gt;</dt></code> (definition term) elements and their associated definitions enclosed in <code>&lt;dd&gt;</code> (definition description) elements.</p>
+        <p>Description lists are designed to present terms and their corresponding definitions.  They consist of a list of terms enclosed in <code>&lt;dt&gt;</dt></code> (description term) elements and their associated definitions enclosed in <code>&lt;dd&gt;</code> (description details) elements.</p>
         <p>
             <code>
                 &lt;dl&gt;
@@ -49,11 +49,12 @@
         <p>This is my first web page.</p>
 
         <h3>My Daily Schedule</h3>
-        <p>Let me tell you how:
-            <br>&nbsp;&nbsp;&nbsp;&nbsp;...I learn about web dev.
-            <br>&nbsp;&nbsp;&nbsp;&nbsp;...I plan out my schedule.
-            <br>&nbsp;&nbsp;&nbsp;&nbsp;...I use resources from <abbr title="Mozilla Developer Network">MDN</abbr>.
-        </p>
+        <p>Let me tell you how:</p>
+        <ol>
+            <li>...I learn about web dev.</li>
+            <li>...I plan out my schedule.</li>
+            <li>...I use resources from <abbr title="Mozilla Developer Network">MDN</abbr>.</li>
+        </ol>
 
         <hr>
 
@@ -62,15 +63,34 @@
         <p>I live in MD, so I want to visit the Philippines.</p>
 
         <h3>Places I would like to visit</h3>
-        <p>I've heard good things about Boracay</p>
-        <p>I've heard good things about going here:</p>
-        <address>
-            Shangri-La Boracay<br>
-            Boracay Island, <br>
-            Malay, 5608 Aklan, Philippines
-        </address>
+        <ul>
+            <li>
+                <p>I've heard good things about Boracay</p>
+            </li>
+            <li>
+                <p>I've heard good things about going here:</p>
+                <address>
+                    Shangri-La Boracay<br>
+                    Boracay Island, <br>
+                    Malay, 5608 Aklan, Philippines
+                </address>
+            </li>
+            
+        
+        </ul>
+        
 
         <h3>Places I want to avoid</h3>
+        <dl>
+            <dt>The North Pole</dt>
+            <dd>I hear this is <strong>cold!</strong></dd>
+
+            <dt>South Pole</dt>
+            <dd>This is also cold.</dd>
+            
+            <dt>Mountain Tops</dt>
+            <dd>These are also cold.</dd>
+        </dl>
         <p>Anywhere cold. No way!</p>
 
         <hr>
