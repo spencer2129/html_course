@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initialscale=1.0">
+        <meta name="author" content="Spencer Aranda">
+        <meta name="description" content="This page teaches you about Links in HTML">
+        <title>HTML Links</title>
+        <link rel="icon" href="./img/html5.png" type="image/x-icon">
+        <link rel="stylesheet" href="./css/styles.css" type="text/css">
+    </head>
+    <body>
+        <h1>Links</h1>
+        <p>Hyperlinks allow us to link documents to other documents or resources, link to specific parts of documents, or make apps available at a web address. Almost any content can be converted to a link, so that when it is clicked it will go to another web address.</p>
+        <p>A basic link is created by wrapping text or other content inside an <code>&lt;a&gt;</code> element and using the <code>href</code> attribute, also known as a Hypertext Reference, or target, that contains the web address.</p>
+        <code>
+            &lt;p&gt;
+            <br>&nbsp;&nbsp;I'm creating a link to
+            <br>&nbsp;&nbsp;&lt;a href="https://www.mozilla.org/en-US/"&gt;the Mozilla homepage&lt;/a&gt;
+            <br>&lt;/p&gt;
+        </code>
+        <p>A block-level element can be made into a link by wrapping the anchor (<code>&lt;a&gt;</code>) element around the block element.</p>
+        <code>
+            &lt;a href="https://developer.mozilla.org/en-US"&gt;
+            <br>&nbsp;&nbsp;&lt;h1&gt;MDN Web Docs&lt;/h1&gt;
+            <br>&lt;/a&gt;
+        </code>
+        <p>An image can be made into a link by wrapping the the anchor (<code>&lt;a&gt;</code>) around the image file referenced by the <code>&lt;img&gt;</code> element.</p>
+        <code>
+            &lt;a href="https://developer.mozilla.org/en-US"&gt;
+            <br>&nbsp;&nbsp;&lt;img src="mdn_logo.svg" /&gt;
+            <br>&lt;/a&gt;
+        </code>
+        <p>Add supporting information to your link by adding the title attribute <code>title="this is the title"</code> to the anchor element <code>&lt;a&gt;</code>.</p>
+        <code>
+            &lt;p&gt;
+            <br>&nbsp;&nbsp;I'm creating a link to
+            <br>&nbsp;&nbsp;&lt;a
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;href="https:/www.mozilla.org/en-US"
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;title="The best place to find more information about Mozilla's mission nad how to contribute"&gt;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;the Mozilla homepage&lt;/a&gt;
+            <br>&lt;/p&gt;
+        </code>
+        <p>A <abbr>URL</abbr> (Uniform Resource Locator) is a string of text that defines where something is located on the Web. URLs use paths to find files.  Paths specify where the file you're interested in is located in the filesystem.</p>
+        <p>There are two types of URLs: absolute and relative</p>
+        <p>Absolute URL points to a location defined by its absolute location on the web, including protocol and domain name. For example, <code>index.html</code> page is uploaded to a directory called <code>projects</code> that sits inside the root of a web server, and the website's domain is <code>https://www.example.com</code>, then the page would be available at <code>https://www.example.com/projects/index.html</code> (or even just <code>https://www.example.com/projects/</code> as most web servers just look for a landing page such as <code>index.html</code> to load if it isn't specified in the URL).</p>
+        <p>Relative URL points to a location that is relative to the file you are linking from. For example, if we wanted to link from our example file <code>https://www.example.com/projects/index.html</code> to a PDF file in the same directory, the URL would just be the filename -- <code>project-brief.pdf</code>-- (the equivalent absolute URL would be <code>https://www.example.com/projects/index.html/project-brief.pdf</code>).</p>
+        <code>
+            &lt;a href="./about.html"&gt;About me&lt;/a&gt;
+        </code>
+        <p>We can also create an internal link to a different part of the same web page; This is like creating a shortcut to diferent areas of the page. Make sure that add an element such as <code>section</code> with an <code>id</code> so you can link to it like this.</p>
+        <code>
+            &lt;nav&gt;
+            <br>&nbsp;&nbsp;&lt;ul&gt;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a href="#projects"&gt;My Projects&lt;/a&gt;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;
+            <br>&nbsp;&nbsp;&lt;/ul&gt;
+            <br>&lt;/nav&gt;
+            <br>
+            <br>&lt;section id="projects"&gt;
+            <br>&nbsp;&nbsp;...
+            <br>&nbsp;&nbsp;...
+            <br>&lt;section&gt;
+        </code>
+
+        <p>Link best practices</p>
+        <ul>
+            <li>Use clear link working, such as <code>&lt;a href="https://www.mozilla.org/en-US/firefox" &gt;Download Firefox&lt;/a&gt;</code>.  Do not use wording like <code>Click here</code>.</li>
+            <li>Do not repeat the URL as part of the link text. URLs look ugly, and sound even uglier when a screen reader reads them out letter by letter.</li>
+            <li>Don't say "link" or "links" in the link text because it's just noise.  Screen readers will tell people there is a link. Visual users will know there is a link because links are styled in a different color and underlined.</li>
+            <li>Keep your link text as short as possible -- this is helpful because screen readers need to interpret the entire link text.</li>
+            <li>Minimize instances where multiple copies of the same text are linked to different places. For example, multiple link texts such as "click here", "click here", "click here" in various parts of the web page.</li>
+        </ul>
+        <p>Use the download attribute when linking to a download</p>
+        <code>
+            &lt;a href="./large-report.pdf" download&gt;
+            <br>&nbsp;&nbsp;Download the sales report (PDF, 10MB)
+            <br>&lt;/a&gt;
+        </code>
+        <br><br>
+        <code>
+            &lt;a 
+            <br>&nbsp;&nbsp;href="https://download.mozilla.org/?product=firefox-latest-ssl&os=win64&lang=en-US"
+            <br>&nbsp;&nbsp;download="firefox-latest-64bit-installer.exe"&gt;
+            <br>&nbsp;&nbsp;Download Latest Firefox for Windows (64-bit) (English, US)
+            <br>&lt;/a&gt;
+        </code>
+        <p>Open links in a new tab with the target attribute.  Links by default open in the same tab as the page they're on, which allows the user to navigate back to the previous page using the browser's back button.  However there are some times, such as when linking to external links, that you  may choose to open links in a new tab.</p>
+        <code>
+            &lt;p&gt;Firefox is developed by the 
+            <br>&nbsp;&nbsp;&lt;a href="https://www.mozilla.org/en-US/" target="_blank"&gt;Mozilla Foundation&lt;/a&gt;
+            <br>&lt;/p&gt;
+        </code>
+        <p>Email links -- when clicked, will open a new outgoing email message rather than linking to a resource or page.</p>
+        <code>
+            &lt;a href="mailto:me@example.com"&gt;Send me an email&lt;/a&gt;
+        </code>
+        <p>Make a call with links so that when clicked, it will open up the dialer.</p>
+        <code>
+            &lt;a href="tel:+123456789"&gt;My Phone&lt;/a&gt;
+        </code>
+        <hr>
+        &lt;&lt;&lt; &copy; <a href="./about.html">Spencer Aranda</a> &gt;&gt;&gt;
+        <p><a href="#">Back to Top</a></p>
+        <p><a href="./index.html">Back Home</a></p>
+    </body>
+</html>

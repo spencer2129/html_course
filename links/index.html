@@ -9,88 +9,64 @@
     </head>
 
     <body>
-        <h1>Links</h1>
-        <p>Hyperlinks allow us to link documents to other documents or resources, link to specific parts of documents, or make apps available at a web address. Almost any content can be converted to a link, so that when it is clicked it will go to another web address.</p>
-        <p>A basic link is created by wrapping text or other content inside an <code>&lt;a&gt;</code> element and using the <code>href</code> attribute, also known as a Hypertext Reference, or target, that contains the web address.</p>
-        <code>
-            &lt;p&gt;
-            <br>&nbsp;&nbsp;I'm creating a link to
-            <br>&nbsp;&nbsp;&lt;a href="https://www.mozilla.org/en-US/"&gt;the Mozilla homepage&lt;/a&gt;
-            <br>&lt;/p&gt;
-        </code>
-        <p>A block-level element can be made into a link by wrapping the anchor (<code>&lt;a&gt;</code>) element around the block element.</p>
-        <code>
-            &lt;a href="https://developer.mozilla.org/en-US"&gt;
-            <br>&nbsp;&nbsp;&lt;h1&gt;MDN Web Docs&lt;/h1&gt;
-            <br>&lt;/a&gt;
-        </code>
-        <p>An image can be made into a link by wrapping the the anchor (<code>&lt;a&gt;</code>) around the image file referenced by the <code>&lt;img&gt;</code> element.</p>
-        <code>
-            &lt;a href="https://developer.mozilla.org/en-US"&gt;
-            <br>&nbsp;&nbsp;&lt;img src="mdn_logo.svg" /&gt;
-            <br>&lt;/a&gt;
-        </code>
-        <p>Add supporting information to your link by adding the title attribute <code>title="this is the title"</code> to the anchor element <code>&lt;a&gt;</code>.</p>
-        <code>
-            &lt;p&gt;
-            <br>&nbsp;&nbsp;I'm creating a link to
-            <br>&nbsp;&nbsp;&lt;a
-            <br>&nbsp;&nbsp;&nbsp;&nbsp;href="https:/www.mozilla.org/en-US"
-            <br>&nbsp;&nbsp;&nbsp;&nbsp;title="The best place to find more information about Mozilla's mission nad how to contribute"&gt;
-            <br>&nbsp;&nbsp;&nbsp;&nbsp;the Mozilla homepage&lt;/a&gt;
-            <br>&lt;/p&gt;
-        </code>
-        <p>A <abbr>URL</abbr> (Uniform Resource Locator) is a string of text that defines where something is located on the Web. URLs use paths to find files.  Paths specify where the file you're interested in is located in the filesystem.</p>
-        <p>There are two types of URLs: absolute and relative</p>
-        <p>Absolute URL points to a location defined by its absolute location on the web, including protocol and domain name. For example, <code>index.html</code> page is uploaded to a directory called <code>projects</code> that sits inside the root of a web server, and the website's domain is <code>https://www.example.com</code>, then the page would be available at <code>https://www.example.com/projects/index.html</code> (or even just <code>https://www.example.com/projects/</code> as most web servers just look for a landing page such as <code>index.html</code> to load if it isn't specified in the URL).</p>
-        <p>Relative URL points to a location that is relative to the file you are linking from</p>
+        <h1>My Goals for the Year</h1>
+        <p>This is page where we will try the HTML elements learned in this lesson!</p>
         <hr>
+        <nav>
+            <ul>
+                <li><a href="./links.html">Learn about HTML Links</a></li>
+                <li><a href="#html">Learning HTML</a></li>
+                <li><a href="#vacation">Planning a Vacation</a></li>
+            </ul>
+        </nav>
+        <section id="html">
+            <h2>I'm ready to learn HTML</h2>
+            <p>This is my first web page.</p>
 
-        <h2>I'm ready to learn HTML</h2>
-        <p>This is my first web page.</p>
+            <h3>My Daily Schedule</h3>
+            <p>Let me tell you how:</p>
+            <ol>
+                <li>...I learn about webdev.</li>
+                <li>...I plan out my schedule.</li>
+                <li>...I use resources from <abbr title="Mozilla Developer Network">
+                    <a href="https://developer.mozilla.org">MDN</a></abbr>.</li>
+            </ol>
+        </section>
+        <section id="vacation">
+            <h2>I am also planning a vacation</h2>
+            <p>I've been working hard and I <em>really need a getaway</em></p>
+            <p>I live in <abbr title="Maryland">MD</abbr>, so I want to visit the Philippines.</p>
 
-        <h3>My Daily Schedule</h3>
-        <p>Let me tell you how:</p>
-        <ol>
-            <li>...I learn about webdev.</li>
-            <li>...I plan out my schedule.</li>
-            <li>...I use resources from <abbr title="Mozilla Developer Network">MDN</abbr>.</li>
-        </ol>
+            <h3>Places I would like to visit</h3>
+            <ul>
+                <li>
+                    <p>I've heard good things about Boracay.</p>
+                </li>
+                <li>
+                    <p>I've heard good things about going here:</p>
+                    <address>
+                        Shangri-La Boracay<br>
+                        Boracay Island, <br>
+                        Malay, 5608 Aklan, Philippines
+                    </address>
+                </li>
+            </ul>
+            <h3>Places I would like to avoid</h3>
+            <dl>
+                <dt>The North Pole</dt>
+                <dd>I heard this is cold!</dd>
 
-        <h2>I am also planning a vacation</h2>
-        <p>I've been working hard and I <em>really need a getaway</em></p>
-        <p>I live in <abbr title="Maryland">MD</abbr>, so I want to visit the Philippines.</p>
+                <dt>South Pole</dt>
+                <dd>This is also cold.</dd>
 
-        <h3>Places I would like to visit</h3>
-        <ul>
-            <li>
-                <p>I've heard good things about Boracay.</p>
-            </li>
-            <li>
-                <p>I've heard good things about going here:</p>
-                <address>
-                    Shangri-La Boracay<br>
-                    Boracay Island, <br>
-                    Malay, 5608 Aklan, Philippines
-                </address>
-            </li>
-        </ul>
-        <h3>Places I would like to avoid</h3>
-        <dl>
-            <dt>The North Pole</dt>
-            <dd>I heard this is cold!</dd>
-
-            <dt>South Pole</dt>
-            <dd>This is also cold.</dd>
-
-            <dt>Mountain Tops</dt>
-            <dd>These are also cold.</dd>
-        </dl>
-        
+                <dt>Mountain Tops</dt>
+                <dd>These are also cold.</dd>
+            </dl>
+        </section>
         
 
         <hr>
-        &lt;&lt;&lt; &copy; Spencer Aranda &gt;&gt;&gt;
-
+        &lt;&lt;&lt; &copy; <a href="./about.html">Spencer Aranda</a> &gt;&gt;&gt;
+        <p><a href="#">Back to Top</a></p>
     </body>
 </html>
