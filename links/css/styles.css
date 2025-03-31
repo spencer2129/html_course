@@ -1,4 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    border: 2px solid green;
+}
+:root {
+    --background-primary: #333;
+    --background-secondary: #1b1b1b;
+    --text-primary: whitesmoke;
+    --text-secondary: #fff;
+    --max-width: 1440px;
+    --h1-text-align: center;
+    
+}
 body {
-    background-color: #333;
-    color: whitesmoke;
+    background-color: var(--background-primary);
+    color: var(--text-primary);
+    max-width: var(--max-width);
+    margin: var(--body-margin);
+    padding: 1rem;
+    border: 2px solid blue;
+}
+h1 {
+    text-align: var(--h1-text-align);
+    font-size: 3rem;
+    padding: 0.5rem;
+    margin: 1rem;
+}
+h2 {
+    font-size: 2rem;
+}
+h3 {
+    font-size: 1.5rem;
+}
+p {
+    margin: 0.5rem;
 }
