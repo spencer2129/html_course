@@ -3,10 +3,14 @@ html {
 }
 body {
     border: 2px solid blue;
+    background-color: #333;
+    color: whitesmoke;
+    
 }
 .outer {
+    display: flow-root;
     width: 50px;
-    height: 100px;
+    min-height: 100px;
     margin-top: 1rem;
     margin-left: 1rem;
     margin-bottom: 1rem;
@@ -14,9 +18,10 @@ body {
 }
 .inner {
     background-color: yellow;
+    float: left;
     width: 25px;
-    height: 25px;
-    margin-top: 1rem;
+    min-height: 25px;
+    margin-top: 3rem;
     margin-bottom: 20rem;
     padding: 0.5rem;
 }
