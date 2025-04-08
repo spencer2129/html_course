@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Spencer Aranda">
+        <meta name="description" content="Block Formatting Context Demo">
+        <title>Block Formatting Context</title>
+        <link rel="stylesheet" href="./css/BFC_styles.css" type="text/css">
+    </head>
+    <body>
+        <div class="solo extra-margin-top">This div has an extra margin top of 3rem, but it does not cause a top margin collapse with the body element (border with blue) because adding a border to the parent element (body - does not create a new BFC by default) will prevent margin collapse between parent and child.</div>
+        <div class="solo">This div is being pushed up by top margin collapse from parent and child boxes below.</div>
+        <div class="outer">
+            <div class="inner"></div>
+            <div class="inner"></div>
+        </div>
+        <div class="solo">This div is being pushed down by bottom margin collapse from parent and child boxes above.</div>
+        <div class="box">
+            <div class="float">I am a floated box that is inside the container box and because my height is greater than my parent div, I poke out from the bottom and out the body element. To fix it add display: flow-root on parent element which would make that element create a new BFC.</div>
+            <p>I am content inside the container</p>
+        </div>
+    </body>
+</html>

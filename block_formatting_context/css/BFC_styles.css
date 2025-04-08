@@ -1,0 +1,45 @@
+/** {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}*/
+html {
+    border: 2px solid green;
+    background-color: #333;
+    color: whitesmoke;
+    
+}
+body {
+    border:2px solid blue;
+}
+.outer {
+    width: 200px;
+    min-height: 100px;
+    background-color: red;
+}
+.inner {
+    background-color: yellow;
+    width: 50px;
+    min-height: 50px;
+    margin: 1.5rem 0.5rem;
+}
+
+
+.solo {
+    background-color: green;
+}
+.box {
+    background-color: rgb(173, 119, 243);
+    border: 5px solid rebeccapurple;
+}
+.float {
+    float: left;
+    width: 400px;
+    height: 200px;
+    background-color: rgb(255 255 255 / 50%);
+    border: 1px solid white;
+}
+
+.extra-margin-top {
+    margin-top: 3rem;
+}

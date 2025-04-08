@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Spencer Aranda">
+        <meta name="description" content="Explain margin collapse and block formatting context">
+        <meta name="viewport" content="width=device-width, initialScale=1.0">
+        <title>Block Formatting Context</title>
+        <link rel="stylesheet" href="./css/styles.css" type="text/css">
+        <link rel="icon" href="./img/html5.png" type="image/x-icon">
+    </head>
+    <body>
+        <header>
+            <h1>Block Formatting Context</h1>
+            <p>A review on BFC and margin collapse</p>
+        </header>
+
+        <main>
+            <section>
+                <h2>Margin Collapse</h2>
+                <p>The top and bottom margins of blocks are sometimes combined (collapsed) into a single margin whose size is the largest of the individual margins (or just one of them, if they are equal), a behavior known as margin collapsing. Note that the margins of floating and absolutely positioned elements never collapse.</p>
+                <p>Margin collapsing occurs in three basic cases:</p>
+                <dl>
+                    <dt>Adjacent siblings</dt>
+                    <dd>The margins of adjacent siblings are collapsed (except when the latter sibling needs to be cleared past floats).</dd>
+
+                    <dt>No content separating parent and descendants</dt>
+                    <dd>If there is no border, padding, inline part, block formatting context created, or clearance to separate the margin-top of a block from the margin-top of one or more of its descendant blocks; or no border, padding, inline content, height, or min-height to separate the margin-bottom of a block from the margin-bottom of one or more of its descendant blocks, then those margins collapse. The collapsed margin ends up outside the parent.</dd>
+
+                    <dt>Empty blocks</dt>
+                    <dd>If there is no border, padding, inline content, height, or min-height to separate a block's margin-top from its margin-bottom, then its top and bottom margins collapse.</dd>
+                </dl>
+            </section>
+            <section>
+                <h2>Block Formatting Context</h2>
+                <p>Normal Flow is defined in the CSS 2.1 specification, which explains that any boxes in normal flow will be part of a formatting context. They can be either block or inline, but not both at once. We describe block-level boxes as participating in a block formatting context, and inline-level boxes as participating in an inline formatting context.</p>
+                <p>In a block formatting context, boxes are laid out one after the other, vertically, beginning at the top of a containing block. The vertical distance between two sibling boxes is determined by the 'margin' properties. Vertical margins between adjacent block-level boxes in a block formatting context collapse. In a block formatting context, each box's left outer edge touches the left edge of the containing block (for right-to-left formatting, right edges touch).</p>
+                <p>My opinion: In normal flow within block formatting context, vertical margins between adjacent blocks collapse, but also margin top of a parent and margin top of a descendants will collapse unless there is a border or new BFC in the parent (same with margin bottom).</p>
+                <p>The outermost element in a document that uses block layout rules establishes the first, or initial block formatting context. This means that every element inside the <code>&lt;html&gt;</code> element's block is laid out according to normal flow following the rules for block and inline layout. Elements participating in a BFC use the rules outlined by the CSS Box Model, which defines how an element's margins, borders, and padding interact with other blocks in the same context. However, any block-level element can be made to create a new BFC by the application of certain CSS properties (<code>display: flow-root</code>).</p>
+                <p>A new BFC will behave much like the outermost document in that it becomes a mini-layout inside the main layout. A BFC contains everything inside it, float and clear only apply to items inside the same formatting context, and margins only collapse between elements in the same formatting context [meaning in a new BFC margins do not collapse between parent and child].</p>
+            </section>
+            <p><a href="./BFC.html">View Example</a></p>
+        </main>
+    </body>
+</html>

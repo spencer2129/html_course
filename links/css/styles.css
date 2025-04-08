@@ -3,9 +3,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-html{
-    border: 2px solid green;
-}
 :root {
     --background-primary: #333;
     --background-secondary: #1b1b1b;
@@ -21,7 +18,6 @@ body {
     max-width: var(--max-width);
     margin: var(--body-margin);
     padding: 1rem;
-    border: 2px solid blue;
 }
 h1 {
     text-align: var(--h1-text-align);
