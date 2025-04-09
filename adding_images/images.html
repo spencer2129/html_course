@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initialScale=1.0">
+        <meta name="author" content="Spencer Aranda">
+        <meta name="description" content="Lesson on HTML images">
+        <title>HTML images</title>
+        <link rel="icon" href="./img/html5.png" type="image/x-icon">
+        <link rel="stylesheet" href="./css/styles.css" type="text/css">
+    </head>
+    <body>
+        <h1>HTML Images</h1>
+        <p>We'll discuss how to use the <code>&lt;img&gt;</code> element, and annotating with captions using <code>&lt;figure&gt;</code>.</p>
+
+        <section>
+            <h2>Putting an image on a webpage</h2>
+            <p>In order to put an image on a web page, you must use the <code>&lt;img&gt;</code> element.  This is a void element which means that it cannot have a child content and cannot have an end tag.  This element requires two attributes to be useful <code>src</code> and <code>alt</code>.  The <code>src</code> attribute contains the URL pointing to the image you want to embed in the page, and can be a realtive URL or an absolute URL.  Without the <code>src</code> attribute, an <code>img</code> element has no image to load. The <code>alt</code> attribute is supposed to contain a textual description of the image, for use in situations where the image cannot be seen/displayed or takes a long time to render because of slow connections.  <code>Alt</code> text is useful when the user is visually impared and is using a screen reader to read the web, or when a browser does not support the image type, or to provide text for search engines to utilize.</p>
+            <pre><code>&lt;img src="./images/boracay.jpg" alt="Boracay, Philippines" /&gt;
+            </code></pre>
+            <p>You can also embed the image using its absolute URL</p>
+            <pre><code>&lt;img src="https://www.example.com/images/boracay.jpg" alt="Boracay, Philippines" /&gt;</code></pre>
+            <h3>Alternative text</h3>
+            <p>Use alternate text <code>alt</code> to give a textual description of the image</p>
+            <pre><code>&lt;img 
+                src="./images/boracay.jpg"
+                alt="This is White Beach in Boracay, Philippines" /&gt;
+            </code></pre>
+            <h3>Width and height</h3>
+            <p>Use <code>width</code> and <code>height</code> attributes to specify the width and height of your image.  These attributes only take integer values without units, such as px.</p>
+            <pre><code>&lt;img 
+                src="./images/boracay.jpg"
+                alt="This is White Beach in Boracay, Philippines"
+                width="400"
+                height="350" /&gt;
+            </code></pre>
+        </section>
+    </body>
+</html>
