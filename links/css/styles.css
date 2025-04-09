@@ -1,8 +1,8 @@
-* {
+/** {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
+}*/
 :root {
     --background-primary: #333;
     --background-secondary: #1b1b1b;
@@ -33,4 +33,13 @@ h3 {
 }
 p {
     margin: 0.5rem;
+}
+a {
+    color: aliceblue;
+}
+a:visited {
+    color: lightgray;
+}
+a:hover, a:active {
+    color: #eee;
 }
