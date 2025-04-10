@@ -15,25 +15,79 @@
 
         <section>
             <h2>Putting an image on a webpage</h2>
-            <p>In order to put an image on a web page, you must use the <code>&lt;img&gt;</code> element.  This is a void element which means that it cannot have a child content and cannot have an end tag.  This element requires two attributes to be useful <code>src</code> and <code>alt</code>.  The <code>src</code> attribute contains the URL pointing to the image you want to embed in the page, and can be a realtive URL or an absolute URL.  Without the <code>src</code> attribute, an <code>img</code> element has no image to load. The <code>alt</code> attribute is supposed to contain a textual description of the image, for use in situations where the image cannot be seen/displayed or takes a long time to render because of slow connections.  <code>Alt</code> text is useful when the user is visually impared and is using a screen reader to read the web, or when a browser does not support the image type, or to provide text for search engines to utilize.</p>
+            <p>In order to put an image on a web page, you must use the <code>&lt;img&gt;</code> element.  This is a void element which means that it cannot have a child content and cannot have an end tag.  This element requires two attributes to be useful <code>src</code> and <code>alt</code>.  The <code>src</code> attribute contains the URL pointing to the image you want to embed in the page, and can be a realtive URL or an absolute URL.  Without the <code>src</code> attribute, an <code>img</code> element has no image to load.</p>
             <pre><code>&lt;img src="./images/boracay.jpg" alt="Boracay, Philippines" /&gt;
             </code></pre>
             <p>You can also embed the image using its absolute URL</p>
             <pre><code>&lt;img src="https://www.example.com/images/boracay.jpg" alt="Boracay, Philippines" /&gt;</code></pre>
             <h3>Alternative text</h3>
-            <p>Use alternate text <code>alt</code> to give a textual description of the image</p>
+            <p>The <code>alt</code> attribute is supposed to contain a textual description of the image, for use in situations where the image cannot be seen/displayed or takes a long time to render because of slow connections.  <code>Alt</code> text is useful when the user is visually impared and is using a screen reader to read the web, or when a browser does not support the image type, or to provide text for search engines to utilize.</p>
             <pre><code>&lt;img 
                 src="./images/boracay.jpg"
                 alt="This is White Beach in Boracay, Philippines" /&gt;
             </code></pre>
             <h3>Width and height</h3>
-            <p>Use <code>width</code> and <code>height</code> attributes to specify the width and height of your image.  These attributes only take integer values without units, such as px.</p>
+            <p>Use <code>width</code> and <code>height</code> attributes to specify the width and height of your image.  These attributes only take integer values without units, such as px. It is important to set a width and height because the browser fetches the HTML page and the image as separate HTTP(S) requests.  As soon as the browser received the HTML page, it will display it to the user.  If the images haven't been received yet, then the browser will only render the HTML, and will update the page with the image as soon as it is received.  This can cause the contents of the HTML page to shift as the image is finally added to the page. However, when you specify the width and height, the browser knows exactly how much space to allocate for the image even before it receives the image which means the browser does not have to move around any surrounding content.</p>
             <pre><code>&lt;img 
                 src="./images/boracay.jpg"
                 alt="This is White Beach in Boracay, Philippines"
                 width="400"
                 height="350" /&gt;
             </code></pre>
+            <h3>Image titles</h3>
+            <p>Use the <code>title</code> attribute to add a title to images that will be shown on mouse hover. Title isn't as important as <code>alt</code> text because screen readers support on titles are unpredictable, and most browsers won't shot it unless you are hovering over it with a mouse.</p>
+            <pre><code>&lt;img 
+                src="./images/boracay.jpg"
+                alt="This is White Beach in Boracay, Philippines"
+                width="400"
+                height="300"
+                title="White Beach, Boracay, Philippines" /&gt;
+            </code></pre>
+            <h3>Lazy loading</h3>
+            <p>Lazy loading is a strategy to identify resources as non-critical and load these only when needed.  It is a way to reduce page load times. For example if you have 50+ images in your webpage, it might take longer to load all those images.  Instead enable lazy loading so that it only loads the images that are neccesary, or that the client can see.  Then as the client scrolls down through your website and as he gets closer to the other off-screen images, the browser will begin to load them. In other words, lazy loading instructs the browser to defer loading of images/iframes that are off-screen until the user scrolls near them speeding up initial page load.</p>
+            <pre><code>&lt;img 
+                src="./images/boracay.jpg"
+                alt="This is White Beach in Boracay, Philippines"
+                width="400"
+                height="350"
+                title="White Beach, Boracay, Philippines"
+                loading="lazy" /&gt;</code></pre>
+        </section>
+        <section>
+            <h2>Annoating images with figures and figure captions</h2>
+            <p>There are a couple of ways to add captions to your images.  Note that adding a title attribute is probably not considered as a caption because you have to hover over the image to see the title.  You can use a paragraph right below the image and add a caption.  This would do the trick, however, the problem is that there is nothing that semantically links the image to its caption, which can cause problems with screen readers.</p>
+            <p>Example using <code>&lt;p&gt;</code> element for caption</p>
+            <pre><code>&lt;div class="figure&gt;
+                &lt;img 
+                    src="./images/boracay.jgp"
+                    alt="This is White Beach in Boracay, Philippines"
+                    width="400"
+                    height="350" /&gt;
+                &lt;p&gt;This is White Beach in Boracay, Philippines&lt;/p&gt;
+                &lt;/div&gt;
+            </code></pre>
+            <p>The best solution is to use HTML <code>&lt;figures&gt;</code> and <code>&lt;figurecaption&gt;</code> elements.  These are created for exactly this purpose which is to provide a semantic container for figures, and to clearly link the figure to the caption. The <code>figcaption</code> element within the <code>figure</code> element tells the browser and assistive technology that the caption describes the other content of the <code>figure</code> element.</p>
+            <pre><code>&lt;figure&gt;
+                &lt;img 
+                    src="./images/boracay.jgp"
+                    alt="This is White Beach in Boracay, Philippines"
+                    width="400"
+                    height="350" /&gt;
+                &lt;figcaption&gt;
+                    This is White Beach in Boracay, Philippines
+                &lt;/figcaption&gt;
+                &lt;/figure&gt;
+            </code></pre>
+            <p>It is important to note that a <code>figure</code> element doesn't have to contain an image inside.  It can contain multiple images, code snippet, audio, video, equations, a table or something else.  However it is recommended that you only use one <code>figcaption</code> element per <code>figure</code> element.</p>
+        </section>
+        <section>
+            <h2>CSS background images</h2>
+            <p>Though this lesson doesn't really cover CSS, I wanted to share that you can use CSS to embed images into webpages by using the <code>background-image</code> property. For example you can use CSS to embed an image within the <code>p</code> element.</p>
+            <pre><code>p {
+                background-image: url("./images/boracay.jpg")
+            }
+            </code></pre>
+            <p>This embedded image is easier to position and control than HTML images.  Remember that CSS background images are for decoration only.  Use it if you want to add something pretty to your page to enhance visuals.  These CSS background images do not add any semantic meanting at all.  They also can't have any text equivalents and are invisible to screen readers.  Hence, if the image you are adding has meaning in terms of your content, you should always use HTML image. If an image is purely decoration, you should use CSS background images.</p>
         </section>
     </body>
 </html>
