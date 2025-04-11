@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Spencer Aranda">
+        <meta name="description" content="Practical lesson on HTML Semantic Tags">
+        <title>HTML Semantic Tags</title>
+        <link rel="icon" href="./img/html5.png" type="image/x-icon">
+        <link rel="stylesheet" href="./css/styles.css" type="text/css">
+    </head>
+    <body>
+        <header>
+            <h1>My Goals for the Year</h1>
+            <p>This page is where we will practice the HTML elements learned in this lesson!</p>
+
+            <nav aria-label="primary-navigation">
+                <ul>
+                    <li><a href="./semantic_tags.html">Learn about HTML Semantic Tags</a></li>
+                    <li><a href="#html">Learning HTML</a></li>
+                    <li><a href="#vacation">Planning a Vacation</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <article id="html">
+                <h2>I'm ready to learn HTMl</h2>
+                <p>This is my first web page.</p>
+
+                <section>
+                    <h3>HTML5</h3>
+                    <img src="./img/html5_logo.jpg" alt="HTML5 logo" title="I am learning HTML5" width="200"  height="200">
+                    <figure>
+                        <figcaption>An Example of HTML5 Code</figcaption>
+                        <p><code>&lt;h1&gt;Hello World&lt;/h1&gt;</code></p>
+                    </figure>
+                </section>
+
+                <section>
+                    <h3>My Daily Schedule</h3>
+                    <p>Let me tell you how:</p>
+                    <ol>
+                        <li>...I learn about webdev.</li>
+                        <li>...I plan out my schedule.</li>
+                        <li>...I use resources from <abbr title="Mozilla Developer Network"><a href="https://developer.mozilla.org">MDN</a></abbr></li>
+                    </ol>
+                    <aside>
+                        <details>
+                            <summary>Guess the <mark>number of hours</mark> I code per day</summary>
+                            <p>I start at <time datetime="08:00">8am</time> and I write code for <time datetime="PT3H">3 hours</time> every morning.</p>
+                        </details>
+                    </aside>
+                </section>
+
+            </article>
+            
+            <article id="vacation">
+                <h2>I am also planning a vacation</h2>
+                <p>I've been working hard and I <em>really need a getaway</em>.</p>
+                <p>I live in <abbr title="Maryland">MD</abbr>, so I want to visit the Philippines.</p>
+
+                <section>
+                    <h3>Places I would like to visit</h3>
+                    <ul>
+                        <li>
+                            <p>I've heard good things about Boracay.</p>
+                            <figure>
+                                <img src="./img/boracay1.jpg" alt="white Beach, Boracay" title="I want to visit Boracay!" width="550" height="400" loading="lazy">
+                                <figcaption>White Beach Getaway, Boracay</figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <p>I've heard good things about going here:</p>
+                            <address>
+                                Shangri-La Boracay <br>
+                                Boracay Island, <br>
+                                Malay, 5608 Aklan, Philippines
+                            </address>
+                            <figure>
+                                <img src="./img/shagri_la_boracay.jpg" alt="Boracay Vacation" title="It's 5 o'Clock Somewhere!" width="600" height="400" loading="lazy">
+                                <figcaption>
+                                    Boracay Vacation Image
+                                </figcaption>
+                            </figure>
+                        </li>
+                    </ul>
+                </section>
+
+                <section>
+                <h3>Places I would like to avoid</h3>
+                    <dl>
+                        <dt>The North Pole</dt>
+                        <dd>I heard this is cold!</dd>
+
+                        <dt>South Pole</dt>
+                        <dd>This is also cold.</dd>
+
+                        <dt>Mountain Tops</dt>
+                        <dd>These are also cold.</dd>
+                    </dl>
+                </section>
+
+            </article>
+        </main>
+        
+        <footer>
+            <p>&lt;&lt;&lt; &copy; <a href="./about.html">Spencer Aranda</a> &gt;&gt;&gt;</p>
+            <p><a href="#">Back to Top</a></p>
+        </footer>
+    </body>
+</html>
