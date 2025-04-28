@@ -12,17 +12,43 @@
     <body>
         <h1>HTML Semantic Tags</h1>
         <p>In programming, <strong>Semantics</strong> refers to the <em>meaning</em> of a piece of code. For example, what effect does running that line of JavaScript have? or what purpose or role does that HTML element have?</p>
+        <p>In JavaScript, consider a function that takes a string parameter and returns an <code>&lt;li&gt;</code> element with that string as its <code>textContent</code>.  Would you need to look at the code to understand what the function did if it was called <code>build('Peach')</code>, or <code>createLiWithContent('Peach')</code>?</p>
+        <p>In CSS, consider styling a list with <code>&lt;li&gt;</code> elements representing different types of fruits.  Would you know what part of the DOM is being selected with <code>div &gt; ul &gt; li</code>, or <code>.fruits_item</code>?</p>
+        <p>Semantics in HTML</p>
         <p>Semantic elements give meaning to your web page.  The word Semantic means that it provides meaning to something.</p>
         <p>The three big areas in a web page are header, main, and footer</p>
         <p>Html pages can have more than one header element.  every social media post can have its own header.</p>
         <p>There can only be one main element per web page.</p>
         <p>You can have multiple footer elements in a page just like the header. For example, you might have a footer per social media post or article.</p>
-        <p>nav is also another semantic element.  there can be more than one nav per page, for example like in the footer. when you have multiple navs you should label your navs.  You can do that using aria-label="primary navigation" as attribute in the nav element.  If you had an h2 inside the nav, you can give an id="primary-navigation" to the h2 and in the nav use aria-labelledby="primary-navigation"</p>
+        <p>nav is also another semantic element.  there can be more than one nav per page, for example like in the footer. when you have multiple navs you should label your navs.  You can do that using aria-label="primary-navigation" as attribute in the nav element.  If you had an h2 inside the nav, you can give an id="primary-navigation" to the h2 and in the nav use aria-labelledby="primary-navigation"</p>
         <p>articles vs sections</p>
         <p>use articles when you have a clear topic, where as section is more generic. For example inside a article you can have multiple sections.</p>
         <p>aside element.  mostly is seen as a sidebar to the page.  But it can also be another section of a complementary text that is not as important as whats in the main or article. details and summary work together in a aside element</p>
         <p>mark element is an inline element that is a highlighter.</p>
         <p>time element to give semantic meaning to time and date.</p>
         <p>you should avoid div and span elements when writing in HTML.  Try to use only semantic elements.  But ocasionally you might need to use divs when styling with CSS.</p>
+        <p>Semantic elements</p>
+        <ul>
+            <li><code>&lt;article&gt;</code></li>
+            <li><code>&lt;aside&gt;</code></li>
+            <li><code>&lt;details&gt;</code></li>
+            <li><code>&lt;figcaption&gt;</code></li>
+            <li><code>&lt;figure&gt;</code></li>
+            <li><code>&lt;footer&gt;</code></li>
+            <li><code>&lt;form&gt;</code></li>
+            <li><code>&lt;header&gt;</code></li>
+            <li><code>&lt;main&gt;</code></li>
+            <li><code>&lt;mark&gt;</code></li>
+            <li><code>&lt;nav&gt;</code></li>
+            <li><code>&lt;section&gt;</code></li>
+            <li><code>&lt;summary&gt;</code></li>
+            <li><code>&lt;time&gt;</code></li>
+        </ul>
+
+        <footer>
+            <p>&lt;&lt;&lt; &copy;<a href="./about.html">Spencer Aranda</a> &gt;&gt;&gt;</p>
+            <p><a href="#">Back to Top</a></p>
+            <p><a href="./index.html">Back to Home</a></p>
+        </footer>
     </body>
 </html>
