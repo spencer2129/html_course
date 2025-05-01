@@ -17,22 +17,104 @@
         
         <main>
             <article>
-                <h2>Visual laybout of table contents</h2>
-                <dl>
-                    <dt><code>&lt;caption&gt;</code></dt>
-                    <dd>The caption HTML element specifies the caption or title of a table, providing the table an accessible description</dd>
-                    
-                    <dt><code>&lt;thead&gt;</code></dt>
-                    <dd>The thead HTML element encapsulates a set of table rows, indicating that they comprise the head of a table with information about the table's columns.</dd>
+                <h2>Layout of Table Contents</h2>
+                <section>
+                    <h3>Definitions</h3>
+                    <dl>
+                        <dt><code>&lt;caption&gt;</code></dt>
+                        <dd>The <code>&lt;caption&gt;</code> HTML element specifies the caption or title of a table, providing the table an accessible description</dd>
+                        
+                        <dt><code>&lt;thead&gt;</code></dt>
+                        <dd>The <code>&lt;thead&gt;</code> HTML element encapsulates a set of table rows, indicating that they comprise the head of a table with information about the table's columns.</dd>
 
-                    <dt><code>&lt;colgroup&gt;</code></dt>
-                    <dt><code>&lt;col&gt;</code></dt>
-                    <dt><code>&lt;th&gt;</code></dt>
-                    <dt><code>&lt;tbody&gt;</code></dt>
-                    <dt><code>&lt;tr&gt;</code></dt>
-                    <dt><code>&lt;td&gt;</code></dt>
-                    <dt><code>&lt;tfoot&gt;</code></dt>
-                </dl>
+                        <dt><code>&lt;colgroup&gt;</code></dt>
+                        <dd>The <code>&lt;colgroup&gt;</code> HTML element defines a group of columns within a <code>&lt;table&gt;</code>. This should appear after the <code>&lt;caption&gt;</code> element, but before any <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>, <code>&lt;tfoot&gt;</code> and <code>&lt;tr&gt;</code> elements</dd>
+                        
+                        <dt><code>&lt;col&gt;</code></dt>
+                        <dd>The <code>&lt;col&gt;</code> HTML element defines one or more columns in a column group represented by its parent <code>&lt;colgroup&gt;</code> element.  The <code>&lt;col&gt;</code> element is only valid as a child of a <code>&lt;colgroup&gt;</code> element that has no <code>&lt;span&gt;</code> attribute defined.</dd>
+
+                        <dt><code>&lt;th&gt;</code></dt>
+                        <dd>The <code>&lt;th&gt;</code> HTMl element defines a cell as the header of a group of table cells and may be used a child of the <code>&lt;tr&gt;</code> element. The exact nature of this group is defined by the <code>scope</code> and <code>headers</code> attributes. Usually the first row (<code>&lt;tr&gt;</code> element) contains the columns headers (<code>&lt;th&gt;</code> elements), which act as the "titles" for the columns to make it easier to understand the information in the columns and identify the data.</dd>
+
+                        <dt><code>&lt;tbody&gt;</code></dt>
+                        <dd>The <code>&lt;tbody&gt;</code> HTML element encapsulates a set of table rows (<code>&lt;tr&gt;</code> elements), indicating that they comprise the body of a table's main data.</dd>
+
+                        <dt><code>&lt;tr&gt;</code></dt>
+                        <dd>The <code>&lt;tr&gt;</code> HTML element defines a row of cells in a table.  The row's cells can then be established using a mix of <code>&lt;td&gt;</code> (data cell) and <code>&lt;th&gt;</code> (header cell) elements.</dd>
+
+                        <dt><code>&lt;td&gt;</code></dt>
+                        <dd>The <code>&lt;td&gt;</code> HTML element defines a cell of a table that contains data and may be used as a child of the <code>&lt;tr&gt;</code> element.</dd>
+
+                        <dt><code>&lt;tfoot&gt;</code></dt>
+                        <dd>The <code>&lt;tfoot&gt;</code> HTML element encapsulates a set of table rows (<code>&lt;tr&gt;</code> elements), indicating that they comprise the foot of a table with information about the table's columns.  This is usually a summary of the columns, such as, a sum of the given numbers in a column.</dd>
+                    </dl>
+                </section>
+                <section>
+                    <h3>Example</h3>
+                    <figure>
+                        <pre>
+                            <code>
+                                &lt;table&gt;
+                                    &lt;caption&gt;
+                                    Front-end web developer course 2021
+                                    &lt;/caption&gt;
+                                    &lt;thead&gt;
+                                    &lt;tr&gt;
+                                        &lt;th scope="col"&gt;Person&lt;/th&gt;
+                                        &lt;th scope="col"&gt;Most interest in&lt;/th&gt;
+                                        &lt;th scope="col"&gt;Age&lt;/th&gt;
+                                    &lt;/tr&gt;
+                                    &lt;/thead&gt;
+                                    &lt;tbody&gt;
+                                    &lt;tr&gt;
+                                        &lt;th scope="row"&gt;Chris&lt;/th&gt;
+                                        &lt;td&gt;HTML tables&lt;/td&gt;
+                                        &lt;td&gt;22&lt;/td&gt;
+                                    &lt;/tr&gt;
+                                    &lt;tr&gt;
+                                        &lt;th scope="row"&gt;Dennis&lt;/th&gt;
+                                        &lt;td&gt;Web accessibility&lt;/td&gt;
+                                        &lt;td&gt;45&lt;/td&gt;
+                                    &lt;/tr&gt;
+                                    &lt;tr&gt;
+                                        &lt;th scope="row"&gt;Sarah&lt;/th&gt;
+                                        &lt;td&gt;JavaScript frameworks&lt;/td&gt;
+                                        &lt;td&gt;29&lt;/td&gt;
+                                    &lt;/tr&gt;
+                                    &lt;tr&gt;
+                                        &lt;th scope="row"&gt;Karen&lt;/th&gt;
+                                        &lt;td&gt;Web performance&lt;/td&gt;
+                                        &lt;td&gt;36&lt;/td&gt;
+                                    &lt;/tr&gt;
+                                    &lt;/tbody&gt;
+                                    &lt;tfoot&gt;
+                                    &lt;tr&gt;
+                                        &lt;th scope="row" colspan="2"&gt;Average age&lt;/th&gt;
+                                        &lt;td&gt;33&lt;/td&gt;
+                                    &lt;/tr&gt;
+                                    &lt;/tfoot&gt;
+                                &lt;/table&gt;
+                                
+                            </code>
+                        </pre>
+                        <figcaption></figcaption>
+                    </figure>
+                </section>
+            </article>
+            <article>
+                <h2>Accessibility</h2>
+                <section>
+                    <h3>Captions</h3>
+                    <p>The <code>&lt;caption&gt;</code> element gives a clear description of the table's purpose, and it helps the user decide whether to check the rest of the table or not.  <code>caption</code> helps those individuals using the aid of assistive technology.</p>
+                </section>
+                <section>
+                    <h3>Scoping rows and columns</h3>
+                    <p>The <code>&lt;scope&gt;</code> value on the header cells (<code>&lt;th&gt;</code> elements) is reduntant, however some assistive technologies may fail to draw correct inferences, so specifying header scope may improve user experiences.</p>
+                </section>
+                <section>
+                    <h3>Complicated tables</h3>
+                    <p>Assistive technologies such as screen readers may have difficulties parsing tables that are complex that header cells can't be associated in a strictly horizontal or vertical way, which can happen when you use <code>&lt;colspan&gt;</code> and <code>&lt;rowspan&gt;</code> attributes.</p>
+                </section>
             </article>
         </main>
         
