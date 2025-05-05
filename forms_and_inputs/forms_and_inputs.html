@@ -12,8 +12,98 @@
     <body>
         <header>
             <h1>HTML Form and Input Elements</h1>
+            <p>The <code>&lt;form&gt;</code> HTML element represents a document section containing interactive controls for submitting information.</p>
         </header>
-        <main></main>
+        <main>
+            <article>
+                <h2>Attributes</h2>
+                <p>These are some of the most common Attributes used with the <code>&lt;form&gt;</code> element.</p>
+                <dl>
+                    <dt><code>autocomplete</code></dt>
+                    <dd>Indicates whether input elements can by default have their values automatically completed by the browser. Possible values to the attribute are <code>off</code> or <code>on</code>.  The <code>autocomplete</code> attribute on form elements override it on <code>form</code></dd>
+
+                    <dt><code>name</code></dt>
+                    <dd>The name of the form.  The value cannot be the empty string, and must be unique between the <code>form</code> elements in the form collection</dd>
+
+                    <dt><code>action</code></dt>
+                    <dd>The URL that processes the form submission. This value can be overridden by a <code>formaction</code> attribute on a <code>&lt;button&gt;</code>, <code>&lt;input type="submit"&gt;</code>, or <code>&lt;input type="image"&gt;</code></dd>
+
+                    <dt><code>method</code></dt>
+                    <dd>The HTTP method to submit the form with. The only allow method values are:
+                        <ul>
+                            <li><code>post</code>: form data is sent as the request body.</li>
+                            <li><code>get</code>: form data appended to the <code>action</code> URL with a <code>?</code> separator. </li>
+                            <li><code>dialog</code>: when the form is inside a <code>&lt;dialog&gt;</code>, closes the dialog and causes a <code>submit</code> event to be fired on submission, without submitting data or clearing the form.</li>
+                        </ul>
+                    </dd>
+                    <dd>This value is overriden by <code>formmethod</code> attributes on <code>&lt;button&gt;</code>, <code>&lt;input type="submit"&gt;</code>, or <code>&lt;input type="image"&gt;</code> elements.</dd>
+
+                    <dt><code>novalidate</code></dt>
+                    <dd>This boolean attribute indicates that the form shouldn't be validated when submitted.</dd>
+
+                    <dt><code>target</code></dt>
+                    <dd>Indicates where to display the response after submitting the form. It is a name/keyword for a browsing context (for example, tab, window, or iframe)</dd>
+                    <dd>
+                        <ul>
+                            <li><code>_self</code>: (Default) Load into the same browsing context as the current one</li>
+                            <li><code>_blank</code>: Load into a new unnamed browsing context.</li>
+                            <li><code>_parent</code>: Load into the parent browsing context of the current one.  If no parent, then it behaves the same as <code>_self</code></li>
+                            <li><code>_top</code>: Load into the top-level browsing context, such as the browsing context that is an ancestor of the current one and has no parent.</li>
+                            <li><code>_unfencedTop</code>: Load the response from a form inside an embedded fenced frame into the top-level frame</li>
+                        </ul>
+                    </dd>
+                    <dd>As with <code>method</code>, the value of the attribute <code>target</code> can be overriden by a <code>formtarget</code> attribute on a <code>&lt;button&gt;</code>, <code>&lt;input type="submit"&gt;</code>, or <code>&lt;input type="image"&gt;</code> element.</dd>
+                </dl>
+            </article>
+
+            <article>
+                <h2>Elements used when creating HTML Forms</h2>
+                <dl>
+                    <dt><code>&lt;button&gt;</code></dt>
+                    <dd></dd>
+
+                    <dt><code>&lt;datalist&gt;</code></dt>
+                    <dd></dd>
+
+                    <dt>&lt;fieldset&gt;</dt>
+                    <dd></dd>
+
+                    <dt>&lt;input&gt;</dt>
+                    <dd></dd>
+
+                    <dt>&lt;label&gt;</dt>
+                    <dd></dd>
+
+                    <dt>&lt;legend&gt;</dt>
+                    <dd></dd>
+
+                    <dt>&lt;meter&gt;</dt>
+                    <dd></dd>
+
+                    <dt>&lt;optgroup&gt;</dt>
+                    <dd></dd>
+
+                    <dt>&lt;option&gt;</dt>
+                    <dd></dd>
+
+                    <dt>&lt;output&gt;</dt>
+                    <dd></dd>
+
+                    <dt>&lt;progress&gt;</dt>
+                    <dd></dd>
+
+                    <dt>&lt;select&gt;</dt>
+                    <dd></dd>
+
+                    <dt>&lt;textarea&gt;</dt>
+                    <dd></dd>
+                </dl>
+            </article>
+            <article>
+                <h2>Example of HTML Form and Input Elements</h2>
+                <pre></pre>
+            </article>
+        </main>
         <footer>
             <p>&lt;&lt;&lt; &copy; <a href="./about.html">Spencer Aranda</a> &gt;&gt;&gt;</p>
             <p><a href="#">Back to Top</a></p>
