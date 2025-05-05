@@ -60,10 +60,24 @@
                 <h2>Elements used when creating HTML Forms</h2>
                 <dl>
                     <dt><code>&lt;button&gt;</code></dt>
-                    <dd></dd>
+                    <dd>The <code>button</code> HTML element is an interactive element activated by a user via mouse, keyboard, finger.  Once activated, it performs an action such as submitting a form or opening a dialog.</dd>
 
                     <dt><code>&lt;datalist&gt;</code></dt>
-                    <dd></dd>
+                    <dd>The <code>&lt;datalist&gt;</code> HTML element contains a set of <code>&lt;option&gt;</code> elements that represent the possible options available to choose from within other controls</dd>
+                    <dd>To bind the <code>&lt;datalist&gt;</code> element to the control, we give it a unique identifier in the <code>id</code> attribute, and then add the <code>list</code> attribute to the <code>&lt;input&gt;</code> element with the same identifier as value.</dd>
+                    <dd>
+                        <pre>
+                            <code>
+                                &lt;label for="myBrowser"&gt;Choose a browser from this list:&lt;/label&gt;
+                                &lt;input <mark>list="browsers"</mark> id="myBrowser" name="myBrowser" /&gt;
+                                &lt;datalist <mark>id="browsers"</mark> &gt;
+                                    &lt;option value="Chrome"&gt;&lt;/option&gt;
+                                    &lt;option value="Firefox"&gt;&lt;/option&gt;
+                                    &lt;option value="Safari"&gt;&lt;/option&gt;
+                                    &lt;option value="Microsoft Edge"&gt;&lt;/option&gt;
+                            </code>
+                        </pre>
+                    </dd>
 
                     <dt>&lt;fieldset&gt;</dt>
                     <dd></dd>
