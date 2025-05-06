@@ -5,7 +5,8 @@ This is an introduction to HTML.  This repository contains multiple HTML topics 
 - Text Basics
 - List Types
 - Links
+- Block Formatting Context
 - Images
 - Semantic Tags
 - Tables
-- Forms & Inputs
+- Forms & Inputsd
