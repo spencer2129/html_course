@@ -100,6 +100,33 @@
                     <dt>&lt;input&gt;</dt>
                     <dd>The <code>&lt;input&gt;</code> HTML element is used to create interactive controls for web-based forms in order to accept data from the user; there is a variety of <mark>types</mark> of  input data.</dd>
                     <dd>
+                        Input Types
+                        <ul>
+                            <li>button</li>
+                            <li>checkbox: a check box allowing single values to be selected/deselected</li>
+                            <li>color</li>
+                            <li>date</li>
+                            <li>datetime-local</li>
+                            <li>email: field for editing email address</li>
+                            <li>file: a control that lets you select a file</li>
+                            <li>hidden</li>
+                            <li>image: a graphical submit button</li>
+                            <li>month</li>
+                            <li>number</li>
+                            <li>password</li>
+                            <li>radio: allows a single value to be selected out of multiple choices with the same name value</li>
+                            <li>range</li>
+                            <li>reset: a button that resets the contents of the form to default values</li>
+                            <li>search</li>
+                            <li>submit</li>
+                            <li>tel</li>
+                            <li>text</li>
+                            <li>time</li>
+                            <li>url</li>
+                            <li>week</li>
+                        </ul>
+                    </dd>
+                    <dd>
                         <pre>
                             <code>
                                 &lt;label for="name"&gt;Name (4 to 15 characters):&lt;/label&gt;
@@ -109,36 +136,158 @@
                     </dd>
 
                     <dt>&lt;label&gt;</dt>
-                    <dd></dd>
+                    <dd>The <code>&lt;label&gt;</code> HTML element represents a caption for an item in a user interface.</dd>
+                    <dd>Associating a <code>&lt;label&gt;</code> with a form control such as <code>&lt;input&gt;</code> or <code>&lt;textarea&gt;</code> can link them both visually and programmatically, meaning that a screen reader will read out the label when the user is focused on the form input.</dd>
+                    <dd>To associate a <code>&lt;label&gt;</code> element with an <code>&lt;input&gt;</code> element, first add the <code>id</code> attribute to the <code>&lt;input&gt;</code> element, and next add the <code>for</code> attribute to the <code>&lt;label&gt;</code> element, where the value of <code>for</code> is the same as the <code>id</code> in the <code>&lt;input&gt;</code> element.</dd>
+                    <dd>
+                        <pre>
+                            <code>
+                                &lt;label <mark>for="cheese"</mark>&gt;Do you like cheese?&lt;/label&gt;
+                                &lt;input <mark>id="cheese"</mark> type="checkbox" name="cheese" /&gt;
+                            </code>
+                        </pre>
+                    </dd>
 
                     <dt>&lt;legend&gt;</dt>
-                    <dd></dd>
+                    <dd>The <code>&lt;legend&gt;</code> HTMl element represents a caption for the content of its parent <code>&lt;fieldset&gt;</code></dd>
 
                     <dt>&lt;meter&gt;</dt>
-                    <dd></dd>
+                    <dd>The <code>&lt;meter&gt;</code> HTML element represents either a scalar value within a known range or a fractional value.</dd>
+                    <dd>
+                        <pre>
+                            <code>
+                                &lt;label for="fuel"&gt;Fuel level:&lt;/label&gt;
+                                &lt;meter id="fuel" min="0" max="100" low="33" high="66" optimum="80" value="50"&gt;at 50/100&lt;/meter&gt;
+                            </code>
+                        </pre>
+                    </dd>
 
                     <dt>&lt;optgroup&gt;</dt>
-                    <dd></dd>
+                    <dd>The <code>&lt;optgroup&gt;</code> element creates a grouping of options within a <code>&lt;select&gt;</code> element.</dd>
+                    <dd>
+                        <pre>
+                            <code>
+                                &lt;label for="dino-select"&gt;Choose a dinosaur:&lt;/label&gt;
+                                &lt;select id="dino-select"&gt;
+                                    <mark>&lt;optgroup label="Theropods"&gt;</mark>
+                                        &lt;option&gt;Tyrannosaurus&lt;/option&gt;
+                                        &lt;option&gt;Velociraptor&lt;/option&gt;
+                                        &lt;option&gt;Deinonychus&lt;/option&gt;
+                                    &lt;/optgroup&gt;
+                                    &lt;optgroup label="Sauropods"&gt;
+                                        &lt;option&gt;Diplodocus&lt;/option&gt;
+                                        &lt;option&gt;Saltasaurus&lt;/option&gt;
+                                        &lt;option&gt;Apatosaurus&gt;/option&gt;
+                                    &lt;/optgroup&gt;
+                                &lt;/select&gt;
+                            </code>
+                        </pre>
+                    </dd>
 
                     <dt>&lt;option&gt;</dt>
-                    <dd></dd>
+                    <dd>The <code>&lt;option&gt;</code> HTML element is used to define an item contained in a <code>&lt;select&gt;</code>, an <code>&lt;optgroup&gt;</code>, or a <code>&lt;datalist&gt;</code> element. As such, <code>&lt;option&gt;</code> can represent menu items in popups and other lists of items in an HTML document.</dd>
 
                     <dt>&lt;output&gt;</dt>
-                    <dd></dd>
+                    <dd>The <code>&lt;output&gt;</code> HTML element is a container element into which a site or app can inject the results of a calculation or the outcome of a user action.</dd>
+                    <dd>In the example below, the form provides a slider whose value can range between 0 and 100, and a <code>&lt;input&gt;</code> element in which you can enter a number. The two numbers are added together, and the result is displayed in the <code>&lt;output&gt;</code> element each time the value of any of the controls changes.</dd>
+                    <dd>
+                        <pre>
+                            <code>
+                                &lt;form id="example-form"&gt;
+                                    &lt;input type="range" id="b" name="b" value="50" /&gt; +
+                                    &lt;input type="number" id="a" name="a" value="10" /&gt; =
+                                    &lt;output name="result" for="a b"&gt;60&lt;/output&gt;
+                                &lt;/form&gt;
+                            </code>
+                            <code>
+                                const form = document.getElementByID("example-form");
+                                const a = form.elements["a"];
+                                const b = form.elements["b"];
+                                const result = forms.elements["result"];
+
+                                function updateResult() {
+                                    const aValue = parseInt(a.value);
+                                    const bValue = parseInt(b.value);
+                                    result.value = aValue + bValue;
+                                }
+                                
+                                form.addEventListener("input", updateResult);
+
+                                updateResult();
+                            </code>
+                        </pre>
+                    </dd>
 
                     <dt>&lt;progress&gt;</dt>
-                    <dd></dd>
+                    <dd>The <code>&lt;progress&gt;</code> HTML element displays an idicator showing the completion progress of a task, typically displayed as a progress bar.</dd>
+                    <dd>
+                        <pre>
+                            <code>
+                                &lt;label for="file">File progress:&lt;/label&gt;
+                                &lt;progress id="file" max="100" value="70"&gt;70%&lt;/progress&gt;
+                            </code>
+                        </pre>
+                    </dd>
 
                     <dt>&lt;select&gt;</dt>
-                    <dd></dd>
+                    <dd>The <code>&lt;select&gt;</code> HTML element represents a control that provides a menu of options.</dd>
+                    <dd>
+                        <pre>
+                            <code>
+                                &lt;label for="pet-select"&gt;Choose a pet:&lt;/label&gt;
+                                &lt;select id="pet-select"&gt;
+                                    &lt;option value=dog"&gt;Dog&lt;/option&gt;
+                                    &lt;option value-"cat"&gt;Cat&lt;/option&gt;
+                                    &lt;option value="parrot"&gt;Parrot&gt;/option&gt;
+                                &lt;/select&gt;
+                            </code>
+                        </pre>
+                    </dd>
 
                     <dt>&lt;textarea&gt;</dt>
-                    <dd></dd>
+                    <dd>The <code>&lt;textarea&gt;</code> HTML element represents a multi-line plain-text editing control, useful when you want to allow users to enter a sizeable amount of free-form text, such as a comment or review on a feedback form.</dd>
+                    <dd>
+                        <pre>
+                            <code>
+                                &lt;label for="story"&gt;Tell us your story:&lt;/label&gt;
+                                &lt;textarea id="story" name="story" rows="5" cols="33" &gt;It was a darnk and stormy night...&lt;/textarea&gt;
+                            </code>
+                        </pre>
+                    </dd>
                 </dl>
             </article>
             <article>
                 <h2>Example of HTML Form and Input Elements</h2>
-                <pre></pre>
+                <pre>
+                    <code>
+                        &lt;!-- Form which will send a GET request to the current URL --&gt;
+                        &lt;form method="get"&gt;
+                            &lt;label&gt;
+                                Name:
+                                &lt;input name="submitted-name" autocomplete="name" /&gt;
+                            &lt;/label&gt;
+                            &lt;button&gt;Save&lt;/button&gt;
+                        &lt;/form&gt;
+                        
+                        &lt;!-- Form which will send a POST request to the current URL --&gt;
+                        &lt;form method="post"&gt;
+                            &lt;label&gt;
+                                Name:
+                                &lt;input name="submitted-name" autocomplete="name" /&gt;
+                            &lt;/label&gt;
+                            &lt;button&gt;Save&lt;/button&gt;
+                        &lt;/form&gt;
+                        
+                        &lt;!-- Form with fieldset, legend, and label --&gt;
+                        &lt;form method="post"&gt;
+                            &lt;fieldset&gt;
+                                &lt;legend&gt;Do you agree to the terms?&lt;/legend&gt;
+                                &lt;label&gt;&lt;input type="radio" name="radio" value="yes" /&gt; Yes&lt;/label&gt;
+                                &lt;label&gt;&lt;input type="radio" name="radio" value="no" /&gt; No&lt;/label&gt;
+                            &lt;/fieldset&gt;
+                        &lt;/form&gt;
+                    </code>
+                </pre>
             </article>
         </main>
         <footer>
