@@ -10,3 +10,4 @@ This is an introduction to HTML.  This repository contains multiple HTML topics 
 - Semantic Tags
 - Tables
 - Forms & Inputsd
+- HTML Project
