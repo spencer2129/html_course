@@ -12,7 +12,7 @@
     <body>
         <header>
             <h1>HTML Form and Input Elements</h1>
-            <p>The <code>&lt;form&gt;</code> HTML element represents a document section containing interactive controls for submitting information.</p>
+            <p>The <code>&lt;form&gt;</code> HTML element represents a document section containing interactive controls for submitting information. <mark>Form controls are the interactive elements within a form that allows users to input data or make selections.</mark></p>
         </header>
         <main>
             <article>
@@ -80,10 +80,33 @@
                     </dd>
 
                     <dt>&lt;fieldset&gt;</dt>
-                    <dd></dd>
+                    <dd>The <code>&lt;fieldset&gt; HTML element is used to group several controls as well as labels within a web form.</code></dd>
+                    <dd>
+                        <pre>
+                            <code>
+                                &lt;fieldset&gt;
+                                    &lt;legend&gt;Choose your favorite fruit&lt;/legend&gt;
+                                    &lt;input type="radio" id="apple" name="fruit" value="apple" /&gt;
+                                    &lt;label for="apple"&gt;Apple&lt;/label&gt;
+                                    &lt;input type="radio" id="mango" name="fruit" value="mango" /&gt;
+                                    &lt;label for="mango"&gt;Mango&lt;/label&gt;
+                                    &lt;input type="radio" id="peach" name="fruit" value="peach" /&gt;
+                                    &lt;label for="peach"&gt;Peach&lt;/label&gt;
+
+                            </code>
+                        </pre>
+                    </dd>
 
                     <dt>&lt;input&gt;</dt>
-                    <dd></dd>
+                    <dd>The <code>&lt;input&gt;</code> HTML element is used to create interactive controls for web-based forms in order to accept data from the user; there is a variety of <mark>types</mark> of  input data.</dd>
+                    <dd>
+                        <pre>
+                            <code>
+                                &lt;label for="name"&gt;Name (4 to 15 characters):&lt;/label&gt;
+                                &lt;input <mark>type="text"</mark> id="name" name="name" required minlength="4" maxlength="15" size="20" /&gt;
+                            </code>
+                        </pre>
+                    </dd>
 
                     <dt>&lt;label&gt;</dt>
                     <dd></dd>
